@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import ClickCounter from './ClickCounter'
 
+const defaultStyle = {
+    margin: '10px'
+}
+
 class ClickCounterGroup extends Component {
 
     constructor(props) {
@@ -17,7 +21,7 @@ class ClickCounterGroup extends Component {
 
     render() {
         return (
-            <div>
+            <div style={defaultStyle}>
                 <ClickCounter onUpdate={this.onCounterUpdate} initialValue={1}/>
                 <ClickCounter onUpdate={this.onCounterUpdate} initialValue={2}/>
                 <ClickCounter onUpdate={this.onCounterUpdate} initialValue={3}/>
