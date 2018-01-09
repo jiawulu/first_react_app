@@ -18,7 +18,7 @@ it("redux", () => {
     store.dispatch(updateTaskAction(1))
 
 
-    store.unsubscribe(unsbus)
+    // store.unsubscribe(unsbus)
 
     console.log(1223)
 })

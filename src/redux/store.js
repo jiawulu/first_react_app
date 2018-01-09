@@ -1,8 +1,10 @@
 import {createStore} from 'redux'
-import reduce from './reduces'
+import todos from './reduces'
 
-const store = createStore(reduce, {
+const initValues = {
     todos : []
-})
+};
+
+const store = createStore(todos, initValues)
 
 export default store
