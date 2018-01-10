@@ -92,3 +92,20 @@ it("test assigen", () => {
     let dest2 = Object.assign({},state,state2)
     console.log(dest2)
 })
+
+
+it("test ....  ES7 提案的 对象展开运算符 ", () => {
+    let state = {
+        type : 'test',
+        index : 1
+    }
+
+    let state2 = {
+        type : 'test2',
+        index : 1
+    }
+
+    let dest = {...state, type: 'abcd'};
+    console.log(dest)
+
+})
