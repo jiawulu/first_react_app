@@ -2,16 +2,37 @@ import axios from "axios"
 
 it("test axios ", () => {
 
-    axios.get("http://baidu.com").then(function (response) {
+    console.log("start get")
+
+    let data = axios.get("http://baidu.com").then(function (response) {
         // console.log(data)
-        console.log(response.data);
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.headers);
-        console.log(response.config);
+
+        console.log("on then")
+
+        // console.log(response.data);
+        // console.log(response.status);
+        // console.log(response.statusText);
+        // console.log(response.headers);
+        // console.log(response.config);
+
+        return response.data;
+
     }).catch(function (e) {
         console.error(e)
+    }).then(function (data) {
+        console.log("on then2");
+        return 123;
+    }).then(function (data) {
+        console.log("on then2" , data);
+        return 456;
     })
+
+    console.log("data",data)
+
+    data.then(function (data) {
+        console.log("on outer then" , data);
+    })
+
 
 })
 
